@@ -1,0 +1,27 @@
+<div class="checkout">
+  <h2>Checkout</h2>
+
+  <div *ngFor="let item of cartItems" class="item">
+    <span>{{ item.name }} x{{ item.quantity }}</span>
+    <span>\${{ item.price * item.quantity }}</span>
+  </div>
+
+  <div class="total">
+    <strong>Total: \${{ total }}</strong>
+  </div>
+
+  <form>
+    <label>
+      Name:
+      <input type="text" [(ngModel)]="name" name="name" />
+    </label>
+
+    <label>
+      Address:
+      <textarea [(ngModel)]="address" name="address"></textarea>
+    </label>
+
+    <button type="button" (click)="placeOrder()">Place Order</button>
+  </form>
+</div>
+

@@ -1,0 +1,25 @@
+.footer {
+  background: #222;
+  color: white;
+  padding: 2rem;
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    div {
+      max-width: 300px;
+    }
+
+    h4 {
+      margin-bottom: 0.5rem;
+      color: #f1c40f;
+    }
+
+    p {
+      margin: 0.25rem 0;
+    }
+  }
+}

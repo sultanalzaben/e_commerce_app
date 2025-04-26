@@ -1,0 +1,28 @@
+<div class="product-page">
+  <h2>Products</h2>
+
+  <div class="filters">
+    <select [(ngModel)]="selectedCategory">
+      <option value="">All Categories</option>
+      <option value="Electronics">Electronics</option>
+      <option value="Clothing">Clothing</option>
+    </select>
+
+    <input type="text" [(ngModel)]="searchText" placeholder="Search products..." />
+  </div>
+
+  <div class="product-list">
+    <div class="product-card" *ngFor="let product of filteredProducts">
+      <h3>{{ product.name }}</h3>
+      <p>{{ product.category }}</p>
+      <p>\${{ product.price }}</p>
+      <button (click)="addToCart(product)">Add to Cart</button>
+      <button (click)="viewDetails(product)">View Details</button>
+    </div>
+  </div>
+
+  <div class="cart-actions">
+    <button (click)="goToCart()">Go to Cart</button>
+    <button (click)="goToCheckout()">Checkout</button>
+  </div>
+</div>
